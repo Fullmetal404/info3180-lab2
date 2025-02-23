@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div id="profile">
+    <div id="info">
+        <img src="{{ url_for('static', filename='image/profile.png') }}" alt="Profile Image">
+        <h1> {{ name }} </h1>
+        <p>
+            {{ username }} <br>
+            {{ location }} <br>
+            {{ joined }}
+        </p>
+    </div>
+    <div id="bio">
+        <p>
+            I am smart and talented young woman who loves
+            website design and development. Contact me if
+            if you'd like to work together on a new project.
+        </p>
+    </div>
+    <div id="stats">
+        <span>
+            <h3 id="posts">{{ posts }}</h3>
+            <label for="posts">Posts</label>
+        </span>
+
+        <span>
+            <h3 id="following">{{ following }}</h3>
+            <label for="following">Following</label>
+        </span>
+
+        <span>
+            <h3 id="followers">{{ followers }}</h3>
+            <label for="followers">Followers</label>
+        </span>
+    </div>
+    <button>Follow</button>
+</div>
+{% endblock %}
